@@ -180,9 +180,42 @@ void animation_func(int val)
         {
             dartActive = false;
             throwActive = false;
+            update_score(dartCenterPt.getY());
         }
     }
 
     glutPostRedisplay();
     glutTimerFunc(ANIMATION_MSEC, animation_func, 0);
+}
+
+void update_score(float dartY)
+{
+    if ((dartY >= (sixthTarget.getCenterPtY() - sixthTarget.getRadius())) && (dartY <= (sixthTarget.getCenterPtY() + sixthTarget.getRadius())))
+    {
+        score += 6;
+    }
+    else if ((dartY >= (fifthTarget.getCenterPtY() - fifthTarget.getRadius())) && (dartY <= (fifthTarget.getCenterPtY() + fifthTarget.getRadius())))
+    {
+        score += 5;
+    }
+    else if ((dartY >= (fourthTarget.getCenterPtY() - fourthTarget.getRadius())) && (dartY <= (fourthTarget.getCenterPtY() + fourthTarget.getRadius())))
+    {
+        score += 4;
+    }
+    else if ((dartY >= (thirdTarget.getCenterPtY() - thirdTarget.getRadius())) && (dartY <= (thirdTarget.getCenterPtY() + thirdTarget.getRadius())))
+    {
+        score += 3;
+    }
+    else if ((dartY >= (secondTarget.getCenterPtY() - secondTarget.getRadius())) && (dartY <= (secondTarget.getCenterPtY() + secondTarget.getRadius())))
+    {
+        score += 2;
+    }
+    else if ((dartY >= (firstTarget.getCenterPtY() - firstTarget.getRadius())) && (dartY <= (firstTarget.getCenterPtY() + firstTarget.getRadius())))
+    {
+        score += 1;
+    }
+    else
+    {
+        score += 0;
+    }
 }
