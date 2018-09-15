@@ -28,7 +28,3 @@ To download, build, install, and run:
 | s     | Stop power bar  |
 | t     | Throw dart      |
 | q     | Quit            |
-
-## Demo
-
-![Demo](https://github.com/cruzanta/bullseye/blob/master/bullseye_demo_04082018.gif?raw=true)
