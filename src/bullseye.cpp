@@ -1,10 +1,11 @@
 #include <GL/glut.h>
 
+#include "point.cpp"
+#include "text.cpp"
+#include "circle.cpp"
+#include "rectangle.cpp"
+
 #include "../include/bullseye.h"
-#include "../include/point.h"
-#include "../include/text.h"
-#include "../include/circle.h"
-#include "../include/rectangle.h"
 
 // Global variables
 int roundNum = 0;

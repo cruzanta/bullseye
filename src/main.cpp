@@ -1,6 +1,6 @@
 #include <GL/glut.h>
 
-#include "../include/bullseye.h"
+#include "bullseye.cpp"
 
 int main(int argc, char **argv)
 {
