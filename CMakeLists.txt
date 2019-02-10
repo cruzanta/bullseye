@@ -11,7 +11,7 @@ include_directories(${OPENGL_INCLUDE_DIRS} ${GLUT_INCLUDE_DIRS})
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "bin/")
 
-file(GLOB_RECURSE bullseye_SOURCES "src/*.cpp")
+file(GLOB_RECURSE bullseye_SOURCES "src/main.cpp")
 
 add_executable(Bullseye ${bullseye_SOURCES})
 
