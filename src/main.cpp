@@ -9,10 +9,10 @@ int main(int argc, char **argv)
   glutInitWindowSize(504, 896);
   glutInitWindowPosition(50, 50);
   glutCreateWindow("Bullseye!");
-  glutReshapeFunc(reshape_func);
-  glutDisplayFunc(display_func);
-  glutKeyboardFunc(keyboard_func);
-  glutTimerFunc(ANIMATION_MSEC, animation_func, 0);
+  glutReshapeFunc(reshape);
+  glutDisplayFunc(display);
+  glutKeyboardFunc(getKeyboardInput);
+  glutTimerFunc(ANIMATION_MSEC, animate, 0);
   glutMainLoop();
 
   return 0;

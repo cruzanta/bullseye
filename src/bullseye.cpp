@@ -49,7 +49,7 @@ Circle dart(dartCenterPt, 5);
 // Rectangles
 Rectangle powerBar(powerBarStartPt, powerBarEndPt.getX(), powerBarEndPt.getY());
 
-void reshape_func(int width, int height)
+void reshape(int width, int height)
 {
   glViewport(0, 0, width, height);
   glMatrixMode(GL_PROJECTION);
@@ -57,7 +57,7 @@ void reshape_func(int width, int height)
   gluOrtho2D(0.0, (GLdouble)width, 0.0, (GLdouble)height);
 }
 
-void display_func(void)
+void display(void)
 {
   glClearColor(0.0, 0.0, 0.0, 1.0);
   glClear(GL_COLOR_BUFFER_BIT);
@@ -110,7 +110,7 @@ void display_func(void)
   glutSwapBuffers();
 }
 
-void keyboard_func(unsigned char c, int x, int y)
+void getKeyboardInput(unsigned char c, int x, int y)
 {
   switch (c)
   {
@@ -148,7 +148,7 @@ void keyboard_func(unsigned char c, int x, int y)
   }
 }
 
-void animation_func(int val)
+void animate(int val)
 {
   // Power bar animation
   if (powerBarActive && !dartActive && !throwActive)
@@ -181,15 +181,15 @@ void animation_func(int val)
     {
       dartActive = false;
       throwActive = false;
-      update_score(dartCenterPt.getY());
+      updateScore(dartCenterPt.getY());
     }
   }
 
   glutPostRedisplay();
-  glutTimerFunc(ANIMATION_MSEC, animation_func, 0);
+  glutTimerFunc(ANIMATION_MSEC, animate, 0);
 }
 
-void update_score(float dartY)
+void updateScore(float dartY)
 {
 
   if ((dartY >= (sixthTarget.getCenterPtY() - sixthTarget.getRadius())) && (dartY <= (sixthTarget.getCenterPtY() + sixthTarget.getRadius())))

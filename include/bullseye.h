@@ -11,10 +11,10 @@
 const int ANIMATION_MSEC = 5;
 
 // Function prototypes
-void reshape_func(int width, int height);
-void display_func();
-void keyboard_func(unsigned char c, int x, int y);
-void animation_func(int val);
-void update_score(float dartY);
+void reshape(int width, int height);
+void display();
+void getKeyboardInput(unsigned char c, int x, int y);
+void animate(int val);
+void updateScore(float dartY);
 
 #endif
