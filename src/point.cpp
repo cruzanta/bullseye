@@ -2,32 +2,32 @@
 
 Point::Point()
 {
-    setX(0);
-    setY(0);
+  setX(0);
+  setY(0);
 }
 
 Point::Point(float x, float y)
 {
-    setX(x);
-    setY(y);
+  setX(x);
+  setY(y);
 }
 
 float Point::getX()
 {
-    return x;
+  return x;
 }
 
 float Point::getY()
 {
-    return y;
+  return y;
 }
 
 void Point::setX(float x)
 {
-    this->x = x;
+  this->x = x;
 }
 
 void Point::setY(float y)
 {
-    this->y = y;
+  this->y = y;
 }
