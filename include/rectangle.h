@@ -1,8 +1,8 @@
 #ifndef rectangle_h
 #define rectangle_h
 
-#include "shape.h"
 #include "point.h"
+#include "shape.h"
 
 class Rectangle : public Shape
 {
