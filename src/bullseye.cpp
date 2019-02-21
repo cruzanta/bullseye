@@ -62,7 +62,7 @@ void display(void)
   glClearColor(0.0, 0.0, 0.0, 1.0);
   glClear(GL_COLOR_BUFFER_BIT);
 
-    // Game text
+  // Game text
   if (showInstructions)
   {
     startInstruction.setColor(1, 1, 1);
