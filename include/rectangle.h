@@ -1,5 +1,5 @@
-#ifndef rectangle_h
-#define rectangle_h
+#ifndef RECTANGLE_H
+#define RECTANGLE_H
 
 #include "point.h"
 #include "shape.h"
@@ -32,4 +32,4 @@ private:
   float blue;
 };
 
-#endif
+#endif // RECTANGLE_H

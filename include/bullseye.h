@@ -1,5 +1,5 @@
-#ifndef bullseye_h
-#define bullseye_h
+#ifndef BULLSEYE_H
+#define BULLSEYE_H
 
 #include "point.h"
 #include "shape.h"
@@ -17,4 +17,4 @@ void getKeyboardInput(unsigned char c, int x, int y);
 void animate(int val);
 void updateScore(float dartY);
 
-#endif
+#endif // BULLSEYE_H

@@ -1,5 +1,5 @@
-#ifndef text_h
-#define text_h
+#ifndef TEXT_H
+#define TEXT_H
 
 #include <string>
 
@@ -27,4 +27,4 @@ private:
   float blue;
 };
 
-#endif
+#endif // TEXT_H

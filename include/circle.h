@@ -1,5 +1,5 @@
-#ifndef circle_h
-#define circle_h
+#ifndef CIRCLE_H
+#define CIRCLE_H
 
 #include "point.h"
 #include "shape.h"
@@ -30,4 +30,4 @@ private:
   float blue;
 };
 
-#endif
+#endif // CIRCLE_H
