@@ -8,7 +8,7 @@ int main(int argc, char **argv)
   glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
   glutInitWindowSize(504, 896);
   glutInitWindowPosition(50, 50);
-  glutCreateWindow("Bullseye!");
+  glutCreateWindow("Bullseye");
   glutReshapeFunc(reshape);
   glutDisplayFunc(display);
   glutKeyboardFunc(getKeyboardInput);
