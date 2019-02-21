@@ -11,17 +11,12 @@
 int roundNum = 0;
 int score = 0;
 int powerBarSpeed = 3;
-bool showInstructions = true;
 bool powerBarActive = false;
 bool powerBarUp = false;
 bool dartActive = false;
 bool throwActive = false;
 
 // Points
-Point startInstructionPt(25, 870);
-Point stopInstructionPt(25, 850);
-Point throwInstructionPt(25, 830);
-Point quitInstructionPt(25, 810);
 Point gameRoundPt(380, 870);
 Point gameScorePt(384, 850);
 Point targetCenterPt(252, 670);
@@ -30,10 +25,6 @@ Point powerBarStartPt(0, 0);
 Point powerBarEndPt(25, 0);
 
 // Text
-Text startInstruction(startInstructionPt, "Start Power Bar : [ space ]");
-Text stopInstruction(stopInstructionPt, "Stop Power Bar : [ s ]");
-Text throwInstruction(throwInstructionPt, "Throw Dart         : [ t ]");
-Text quitInstruction(quitInstructionPt, "Quit Game          : [ q ]");
 Text gameRound(gameRoundPt, "Round: " + std::to_string(roundNum));
 Text gameScore(gameScorePt, "Score: " + std::to_string(score));
 
@@ -61,19 +52,6 @@ void display(void)
 {
   glClearColor(0.0, 0.0, 0.0, 1.0);
   glClear(GL_COLOR_BUFFER_BIT);
-
-  // Game text
-  if (showInstructions)
-  {
-    startInstruction.setColor(1, 1, 1);
-    startInstruction.draw();
-    stopInstruction.setColor(1, 1, 1);
-    stopInstruction.draw();
-    throwInstruction.setColor(1, 1, 1);
-    throwInstruction.draw();
-    quitInstruction.setColor(1, 1, 1);
-    quitInstruction.draw();
-  }
 
   gameRound.setText("Round: " + std::to_string(roundNum));
   gameRound.setColor(1, 1, 1);
@@ -138,7 +116,6 @@ void getKeyboardInput(unsigned char c, int x, int y)
       {
         powerBarSpeed += 3;
         throwActive = true;
-        showInstructions = false;
       }
       break;
     // Quit
